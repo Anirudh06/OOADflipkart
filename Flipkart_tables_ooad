@@ -26,22 +26,22 @@ VALUES ('100878','Mi LED Smart TV','This is Last item','/home/anirudh/img3.png',
 Sql: Select * from tbl_item;
 
 2. Buyerinfo Table:
+Buyerinfo Table:
 CREATE TABLE tbl_buyerinfo (
         surr_key Integer PRIMARY KEY AUTO_INCREMENT,
-	buyer_id int(10) NOT NULL,
+	buyer_id varchar(200) NOT NULL UNIQUE,
+	password varchar(50) NOT NULL,
 	name varchar(30) NOT NULL,
-    	dob DATE NOT NULL,
-	address varchar(200) NOT NULL
-);
+    	dob DATE NOT NULL);
 	
-INSERT INTO tbl_buyerinfo (buyer_id,name,dob,address)
-VALUES ('10067','Satyam','1996-01-01','IIITB Room Number 304');
-INSERT INTO tbl_buyerinfo (buyer_id,name,dob,address)
-VALUES ('10098','Utkarsh','1997-01-01','IIITB Room Number 303');
-INSERT INTO tbl_buyerinfo (buyer_id,name,dob,address)
-VALUES ('10054','Prabhanjan','1995-01-01','IIITB Room Number 106');
-INSERT INTO tbl_buyerinfo (buyer_id,name,dob,address)
-VALUES ('10076','Mayank','1994-01-01','IIITB Room Number 309');
+INSERT INTO tbl_buyerinfo (buyer_id,password,name,dob)
+VALUES ('ac@gmail.com','1234','Satyam','1996-01-01');
+INSERT INTO tbl_buyerinfo (buyer_id,password,name,dob)
+VALUES ('bc@gmail.com','1234','Utkarsh','1997-01-01');
+INSERT INTO tbl_buyerinfo (buyer_id,password,name,dob)
+VALUES ('dc@gmail.com','1234' ,'Prabhanjan','1995-01-01');
+INSERT INTO tbl_buyerinfo (buyer_id,password,name,dob)
+VALUES ('ec@gmail.com','1234','Mayank','1994-01-01');
 
 Sql: Select * from tbl_buyerinfo;
 
